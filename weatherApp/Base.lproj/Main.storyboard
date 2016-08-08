@@ -49,6 +49,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2k0-wB-FbB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-lt-sHP">
                                 <constraints>
@@ -79,6 +82,10 @@
                             <constraint firstItem="3bN-ip-zSO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEc-hN-ezO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="Abl-B9-sZ1" id="4o6-bp-QSg"/>
+                        <outlet property="resultLabel" destination="Wze-lt-sHP" id="jA3-g4-tbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
