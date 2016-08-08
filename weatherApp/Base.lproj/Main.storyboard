@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherappphoto" translatesAutoresizingMaskIntoConstraints="NO" id="6f0-hO-OcX"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-ip-zSO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="7Rj-3g-DEs"/>
+                                    <constraint firstAttribute="width" constant="272" id="K8A-9l-UN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-Ng-HPp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="b4M-Kw-5dt"/>
+                                    <constraint firstAttribute="height" constant="28" id="r9t-qw-jtR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.87" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Anchorage, Coronado, New York" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-B9-sZ1">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWm-UT-NDq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="GjZ-YZ-hBw"/>
+                                    <constraint firstAttribute="height" constant="31" id="ung-PW-4sm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-lt-sHP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="kEH-cs-TFn"/>
+                                    <constraint firstAttribute="height" constant="126" id="qS6-5A-dNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6f0-hO-OcX" secondAttribute="trailing" id="7cr-18-4Vk"/>
+                            <constraint firstItem="8x7-Ng-HPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FJj-LU-rGB"/>
+                            <constraint firstItem="Wze-lt-sHP" firstAttribute="top" secondItem="QWm-UT-NDq" secondAttribute="bottom" constant="45" id="IzT-1O-5uk"/>
+                            <constraint firstItem="QWm-UT-NDq" firstAttribute="top" secondItem="Abl-B9-sZ1" secondAttribute="bottom" constant="21" id="Kje-Mn-jXw"/>
+                            <constraint firstItem="Abl-B9-sZ1" firstAttribute="top" secondItem="8x7-Ng-HPp" secondAttribute="bottom" constant="21" id="N5T-S3-1Gi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6f0-hO-OcX" secondAttribute="bottom" id="RHn-DD-LMM"/>
+                            <constraint firstItem="QWm-UT-NDq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UPF-pG-RFV"/>
+                            <constraint firstItem="Wze-lt-sHP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBG-Lu-HKy"/>
+                            <constraint firstItem="8x7-Ng-HPp" firstAttribute="top" secondItem="3bN-ip-zSO" secondAttribute="bottom" constant="23" id="XHb-Lh-vTT"/>
+                            <constraint firstItem="3bN-ip-zSO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZUw-kE-osS"/>
+                            <constraint firstItem="6f0-hO-OcX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h4l-Hw-sKk"/>
+                            <constraint firstItem="Abl-B9-sZ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mwy-9M-eD4"/>
+                            <constraint firstItem="Abl-B9-sZ1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p7H-gb-jxC"/>
+                            <constraint firstItem="6f0-hO-OcX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sDz-Fi-nhh"/>
+                            <constraint firstItem="3bN-ip-zSO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEc-hN-ezO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weatherappphoto" width="1000" height="1304"/>
+    </resources>
 </document>
