@@ -41,6 +41,9 @@
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.87" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Anchorage, Coronado, New York" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-B9-sZ1">
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KFj-Ko-Ycf"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWm-UT-NDq">
                                 <constraints>
@@ -53,26 +56,26 @@
                                     <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2k0-wB-FbB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-lt-sHP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-vt-qdp" userLabel="resultsLabel">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="kEH-cs-TFn"/>
-                                    <constraint firstAttribute="height" constant="126" id="qS6-5A-dNg"/>
+                                    <constraint firstAttribute="height" constant="197" id="Z3K-Ig-sBi"/>
+                                    <constraint firstAttribute="width" constant="226" id="ccK-rb-3qi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="sav-vt-qdp" firstAttribute="top" secondItem="Abl-B9-sZ1" secondAttribute="bottom" constant="51" id="1aa-hY-GFs"/>
                             <constraint firstAttribute="trailing" secondItem="6f0-hO-OcX" secondAttribute="trailing" id="7cr-18-4Vk"/>
                             <constraint firstItem="8x7-Ng-HPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FJj-LU-rGB"/>
-                            <constraint firstItem="Wze-lt-sHP" firstAttribute="top" secondItem="QWm-UT-NDq" secondAttribute="bottom" constant="45" id="IzT-1O-5uk"/>
+                            <constraint firstItem="sav-vt-qdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G05-3w-z5h"/>
                             <constraint firstItem="QWm-UT-NDq" firstAttribute="top" secondItem="Abl-B9-sZ1" secondAttribute="bottom" constant="21" id="Kje-Mn-jXw"/>
                             <constraint firstItem="Abl-B9-sZ1" firstAttribute="top" secondItem="8x7-Ng-HPp" secondAttribute="bottom" constant="21" id="N5T-S3-1Gi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6f0-hO-OcX" secondAttribute="bottom" id="RHn-DD-LMM"/>
                             <constraint firstItem="QWm-UT-NDq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UPF-pG-RFV"/>
-                            <constraint firstItem="Wze-lt-sHP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBG-Lu-HKy"/>
                             <constraint firstItem="8x7-Ng-HPp" firstAttribute="top" secondItem="3bN-ip-zSO" secondAttribute="bottom" constant="23" id="XHb-Lh-vTT"/>
                             <constraint firstItem="3bN-ip-zSO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZUw-kE-osS"/>
                             <constraint firstItem="6f0-hO-OcX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h4l-Hw-sKk"/>
@@ -84,7 +87,7 @@
                     </view>
                     <connections>
                         <outlet property="cityTextField" destination="Abl-B9-sZ1" id="4o6-bp-QSg"/>
-                        <outlet property="resultLabel" destination="Wze-lt-sHP" id="jA3-g4-tbw"/>
+                        <outlet property="resultLabel" destination="sav-vt-qdp" id="ZZe-zO-nvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
